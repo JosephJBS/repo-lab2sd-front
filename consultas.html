@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Consultas</title>
+        
+        
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.bare.js" integrity="sha512-SiHaVty+Z5mm0yoLc2VfLOB6+HMnqbAervEr0hFvmMjeeozy/6h8IZc02go+Yc2rV8pBBknDRO3dFgto5q9jAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+
+    <body class="sb-nav-fixed">
+
+    <nav>
+<a href="inicio.html">Inicio</a>
+<a href="consultas.html">Consultas</a>
+</nav>
+                <main style="background: white; padding-bottom: 40px; padding-top: 20px">
+                    <center><h2>Consultas	</h2></center>
+                    <br>
+
+
+                    
+<!--prueba-->
+<div class="container"></div>
+<div class="border-bottom d-lg-block font-clase-rob"><!-- FILTRADO-->
+    <div class="row">
+<div id="products_grid_before" class="col-sm-5 col-lg-3">
+    
+
+    
+    <br>
+
+    <div class="d-lg-block tp-filter-attribute tp-filter-sidebar-item" id="">
+        
+        <ul class="nav nav-pills flex-column mb-2" id="">
+
+            
+
+            <div class="selections">                    
+                <h4>
+                   Países:
+                </h4>
+               
+               
+               <div class="radio">
+               <input type="radio" name="radioCountry"id="todos" onclick="mostrarData()" checked><label for="radiob0">Todos  </label>
+                <input type="radio" name="radioCountry"id="arg"onclick="mostrarData()"><label for="radiob1">Argentina  </label><br>
+               <input type="radio" name="radioCountry"id="bol"onclick="mostrarData()"><label for="radiob2">Bolivia  </label>
+               <input type="radio" name="radioCountry"id="bra"onclick="mostrarData()"><label for="radiob3">Brasil  </label><br>
+               <input type="radio" name="radioCountry"id="chi"onclick="mostrarData()"><label for="radiob4">Chile  </label>
+               <input type="radio" name="radioCountry"id="col"onclick="mostrarData()"><label for="radiob5">Colombia  </label><br>
+               <input type="radio" name="radioCountry"id="ecu"onclick="mostrarData()"><label for="radiob6">Ecuador  </label>
+               <input type="radio" name="radioCountry"id="pry"onclick="mostrarData()"><label for="radiob7">Paraguay  </label><br>
+               <input type="radio" name="radioCountry"id="per"onclick="mostrarData()"><label for="radiob8">Peru  </label>
+               <input type="radio" name="radioCountry"id="ury"onclick="mostrarData()"><label for="radiob9">Uruguay  </label><br>
+               <input type="radio" name="radioCountry"id="ven"onclick="mostrarData()"><label for="radiob10">Venezuela</label><br><br>
+               </div>	
+               
+               
+                <h4>
+                   Consultas:
+                </h4>
+               <div class="radio">
+               
+               <input type="radio" name="radio2"id="r1"onclick="mostrarData()"><label for="rad1">Personas mayores de 15 años, viviendo con VIH</label><br>
+               <input type="radio" name="radio2"id="r2"onclick="mostrarData()"><label for="rad2">Edad promedio de hombres, en su primer matrimonio</label><br>
+               <input type="radio" name="radio2"id="r3"onclick="mostrarData()"><label for="rad3">Edad promedio de mujeres, en su primer matrimonio.</label><br>
+               <input type="radio" name="radio2"id="r4"onclick="mostrarData()"><label for="rad4">Prevalencia de diabetes (%poblacion entre 25 y 79 años)</label><br>
+               <input type="radio" name="radio2"id="r5"onclick="mostrarData()"><label for="rad5">Camas de hospital (por cada 1000 personas)</label><br>
+               <input type="radio" name="radio2"id="r6"onclick="mostrarData()"><label for="rad6">Incidencia de TBC (por cada 1000 personas)</label><br>
+               <input type="radio" name="radio2"id="r7"onclick="mostrarData()" ><label for="rad7">Expectativa de vida al nacer (en años)</label><br>
+               </div>
+        </div>
+        <!--<form> <input type="button" value="Consultar" onclick="mostrarData()"></form>-->
+            
+           
+        </ul>
+        <!--FILTER -EDITORIAL-->
+        
+        
+        <!--FIN- FILTER EDITORIAL--->
+        
+    </div>
+</div>
+
+
+<!-- LADO DERECHO- PRODUCTOS y PAGINACION-->
+<div id="product_grid" class="col">
+    <div class="row">
+        <div class="col-16"><!--Panel de la categoria-->   
+            <br><br><br>
+            <div class="container-fluid px-4">
+                        
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="card mb-4">
+                            <div class="card-header" id="nombreConsulta" >
+                                <i class="fas fa-chart-bar me-1"></i>
+                            </div>
+                            <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
+                            <div class="card-footer small text-muted"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+  
+
+
+    
+  
+    
+</div>
+</div>
+</div>
+</div>
+
+<!--finPrueba-->
+
+
+
+ <!--<div class="selections">                    
+ <h4>
+	Países:
+ </h4>
+
+
+<div class="radio">
+<input type="radio" name="radioCountry"id="todos" ><label for="radiob0">Todos  </label>
+ <input type="radio" name="radioCountry"id="arg"><label for="radiob1">Argentina  </label>
+<input type="radio" name="radioCountry"id="bol"><label for="radiob2">Bolivia  </label>
+<input type="radio" name="radioCountry"id="bra"><label for="radiob3">Brasil  </label>
+<input type="radio" name="radioCountry"id="chi"><label for="radiob4">Chile  </label>
+<input type="radio" name="radioCountry"id="col"><label for="radiob5">Colombia  </label>
+<input type="radio" name="radioCountry"id="ecu"><label for="radiob6">Ecuador  </label>
+<input type="radio" name="radioCountry"id="pry"><label for="radiob7">Paraguay  </label>
+<input type="radio" name="radioCountry"id="per"><label for="radiob8">Peru  </label>
+<input type="radio" name="radioCountry"id="ury"><label for="radiob9">Uruguay  </label>
+<input type="radio" name="radioCountry"id="ven"><label for="radiob10">Venezuela</label>
+</div>	
+
+
+ <h4>
+	Consultas:
+ </h4>
+<div class="radio">
+
+<input type="radio" name="radio2"id="r1"><label for="rad1">Personas mayores de 15 años, viviendo con VIH</label>
+<input type="radio" name="radio2"id="r2"><label for="rad2">Edad promedio de hombres, en su primer matrimonio</label>
+<input type="radio" name="radio2"id="r3"><label for="rad3">Edad promedio de mujeres, en su primer matrimonio.</label>
+<input type="radio" name="radio2"id="r4"><label for="rad4">Prevalencia de diabetes (%poblacion entre 25 y 79 años)</label>
+<input type="radio" name="radio2"id="r5"><label for="rad5">Camas de hospital (por cada 1000 personas)</label>
+<input type="radio" name="radio2"id="r6"><label for="rad6">Incidencia de TBC (por cada 1000 personas)</label>
+<input type="radio" name="radio2"id="r7"><label for="rad7">Expectativa de vida al nacer (en años)</label>
+</div>
+</div>-->
+
+
+<!--<form> <input type="button" value="Consultar" onclick="mostrarData()"></form>-->
+                    </br>
+                    
+                </main>
+                
+            
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        
+        
+
+
+        <script>
+            Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+            Chart.defaults.global.defaultFontColor = '#292b2c';
+        </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        </body>
+</html>

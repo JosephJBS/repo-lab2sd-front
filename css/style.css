@@ -1,0 +1,96 @@
+@charset "UTF-8";
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+
+
+}
+body{
+ font-family:'Roboto'
+	
+}
+.contenedor{
+ padding: 60px 0;
+ width: 90%;
+ max-width: 1000px;
+ margin: auto;
+ overflow: hidden;
+}
+.titulo{
+ color: #2A6697;
+font-size: 30px;
+text-align: center;
+margin-bottom: 60px;
+}
+header{
+ width: 100%;
+ height: 600px;
+ background: rgb(133,194,241);
+background: linear-gradient(108deg, rgba(133,194,241,1) 0%, rgba(238,238,246,0.5578606442577031) 100%), url(C:/Users/julio/OneDrive/Escritorio/demo/images/Fondo.jfif);
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+}
+header .textos-header{
+ display: flex;
+ height: 430px;
+width: 100%;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align:center;
+}
+.textos-header h1{
+ font-size: 50px;
+fron-weight:300;
+color:#fff;
+
+}
+nav{
+ text-align:right;
+	padding:30px 50px 0 0;
+}
+nav>a{
+ color:#fff;
+ font-weight:300;
+text-decoration:none;
+margin-right:20px;
+}
+
+.wave{
+ position: absolute;
+bottom: 0;
+width: 100%;
+}
+.contenedor-more-about{
+ display: flex;
+ justify-content: space-evenly;
+}
+.imagen-more-about{
+ width:48%;
+}
+.contenedor more-about .contenedor-textos{
+ width: 48%
+}
+.contenedor-textos h3{
+ margin-bottom:50px;
+}
+.contenedor-textos h3 span{
+ background: #62C29F;
+color: #fff;
+border-radius:50%;
+display:inline-block;
+text-align: center;
+width: 30px;
+height: 30px;
+padding:5px;
+box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+margin-right: 5px;
+}
+.contenedor-textos p{
+ padding: 0px 0px 30px 15px;
+font-weight:300;
+text-align: justify;
+
+}
